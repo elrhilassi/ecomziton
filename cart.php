@@ -23,7 +23,7 @@ session_start();
     <!-- Start NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">A1</a>
+            <a class="navbar-brand fw-bold" href="#">ChicCart</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -90,11 +90,11 @@ session_start();
                             <?php
                                 if(!isset($_SESSION['username'])){
                                     echo "<span>
-                                    Welcome guest
+                                     guest
                                 </span>";
                             }else{
                                     echo "<span>
-                                    Welcome ".$_SESSION['username']. "</span>";
+                                     ".$_SESSION['username']. "</span>";
                                 }
                                 ?>
                         </a>
@@ -141,9 +141,12 @@ session_start();
                                         <th>Product Title</th>
                                         <th>Product Image</th>
                                         <th>Quantity</th>
-                                        <th>Total Price</th>
-                                        <th>Remove</th>
-                                        <th colspan='2'>Operations</th>
+                                        <th>Price</th>
+                                        <th>Action</th>
+                                        
+                                       
+                                        
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -166,10 +169,11 @@ session_start();
                                     <tr class="d-flex flex-column d-md-table-row ">
                                         <td>
                                             <?php echo $product_title; ?>
+                                           
                                         </td>
                                         <td><img src="./admin/product_images/<?php echo $product_image_one; ?>" class="img-thumbnail" alt="<?php echo $product_title; ?>"></td>
                                         <td>
-                                            <input type="number" class="form-control w-50 mx-auto" min="1" name="qty_<?php echo $product_id; ?>">
+                                            <input type="number" class="form-control w-50 mx-auto" min="1" value="<?php echo $product_quantity; ?>" name="qty_<?php echo $product_id; ?>">
                                         </td>
                                         <?php
                                         // $total_price += $product_values * $product_quantity;
@@ -193,12 +197,11 @@ session_start();
                                         <td>
                                             <?php echo $price_table; ?>
                                         </td>
-                                        <td><input type="checkbox" name="removeitem[]" value="<?php echo $product_id ?>"></td>
+                                        
                                         <td>
                                             <!-- <button class="btn btn-dark">Update</button> -->
                                             <input type="submit" value="Update" class="btn btn-dark" name="update_cart">
-                                        </td>
-                                        <td>
+                                       
                                             <!-- <button class="btn btn-primary">Remove</button> -->
                                             <input type="submit" value="Remove" class="btn btn-primary" name="remove_cart">
                                         </td>
@@ -222,10 +225,10 @@ session_start();
                             echo "
                         <h4>Sub-Total: <strong class='text-2'> $total_price</strong></h4>
                         
-                        <input type='submit' value='Continue Shopping' class='btn btn-dark' name='continue_shopping'>
+                       
                         <button class='btn btn-dark'><a class='text-light' href='./index.php'>Continue Shopping</a></button>
                         
-                        <input type='submit' value='Checkout' class='btn btn-dark' name='checkout'>
+                        
                         <button class='btn btn-dark'><a class='text-light' href='./users_area/checkout.php'>Checkout</a></button>
                         ";
                         }else{

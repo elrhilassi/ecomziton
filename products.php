@@ -23,7 +23,7 @@ session_start();
     <!-- Start NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">A1</a>
+            <a class="navbar-brand fw-bold" href="#">ChicCart</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -90,11 +90,11 @@ session_start();
                             <?php
                                 if(!isset($_SESSION['username'])){
                                     echo "<span>
-                                    Welcome guest
+                                     guest
                                 </span>";
                             }else{
                                     echo "<span>
-                                    Welcome ".$_SESSION['username']. "</span>";
+                                     ".$_SESSION['username']. "</span>";
                                 }
                                 ?>
                         </a>

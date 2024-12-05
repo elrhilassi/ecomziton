@@ -23,7 +23,7 @@ session_start();
     <!-- Start NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">A1</a>
+            <a class="navbar-brand fw-bold" href="#">ChicCart</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -90,11 +90,11 @@ session_start();
                             <?php
                                 if(!isset($_SESSION['username'])){
                                     echo "<span>
-                                    Welcome guest
+                                     guest
                                 </span>";
                             }else{
                                     echo "<span>
-                                    Welcome ".$_SESSION['username']. "</span>";
+                                     ".$_SESSION['username']. "</span>";
                                 }
                                 ?>
                         </a>
@@ -126,10 +126,9 @@ session_start();
             <div class="row m-0">
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 p-md-0 tabs-categ">
                     <ul class="p-md-0 d-flex flex-column gap-3 pt-md-3">
-                        <li>Women's Fashion &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>
+                        <li>Women's Fashion
                         </li>
                         <li>men's Fashion
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>
                         </li>
                         <li>Electronics</li>
                         <li>Home & lifestyle</li>

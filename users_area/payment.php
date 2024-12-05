@@ -79,11 +79,11 @@ include('../functions/common_functions.php');
                             <?php
                             if (!isset($_SESSION['username'])) {
                                 echo "<span>
-                                    Welcome guest
+                                     guest
                                 </span>";
                             } else {
                                 echo "<span>
-                                    Welcome " . $_SESSION['username'] . "</span>";
+                                     " . $_SESSION['username'] . "</span>";
                             }
                             ?>
                         </a>
